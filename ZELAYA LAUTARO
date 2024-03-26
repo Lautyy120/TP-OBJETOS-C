@@ -1,0 +1,72 @@
+//El director de una escuela está organizando un viaje de estudios, 
+//y requiere determinar cuánto debe cobrar a cada alumno y cuánto debe pagar a la compañía de viajes por el servicio. La forma de cobrar es la siguiente: 
+//Si son 100 alumnos o más, el costo por cada alumno es de $ 500, de 50 a 99 alumnos, el costo es de $ 400  y  de 30 a 49, de $ 300. Pero si son menos de 30, el costo del alquiler del micro es de $ 6000.- sin importar el número de alumnos. 
+//Realice un algoritmo que permita determinar el pago por el alquiler del micro y lo que debe pagar cada alumno por el viaje.
+
+#include<stdio.h>
+main () {
+
+int caser, alumnos, precio, preciototal;
+int n = 3, sueldo_base, totalventas, comision, total, ventas;
+float precioxalumno, sueldototal;
+printf ("ingrese algun numero: 1(para saber el pago del alquiler de micro y lo que debe pagar cada alumno por el viaje)\n, ejercicio 2\n, ejercicio 3\n");
+scanf ("%d", &caser);
+switch (caser) {
+	case 1:
+		printf ("ingrese la cantidad de la alumnos: ");
+		scanf ("%d", & alumnos);
+		if (alumnos>=100) {
+			precio= 500 * alumnos;
+		}
+		else if (alumnos>=50) {
+			precio = 400* alumnos;
+		}
+		else if (alumnos>=30) {
+			precio = 300 * alumnos;
+		}
+		else if (alumnos<30) {
+			precio = 6000;
+	}
+		printf ("el precio que hay que pagar por el alquiler de micros es de %d", precio);
+		preciototal = alumnos * precio;
+		precioxalumno = precio / alumnos;
+		printf ("el precio total es de %d\n Los alumnos deben pagar %f", preciototal,precioxalumno);
+
+
+
+break;
+
+
+case 2:
+
+int i= 0;
+printf("ingresar un sueldo base: ");
+scanf("%d", &sueldo_base);
+
+for (i= 0; i<n; i++) {
+printf( "ingrese suma venta: ");
+scanf("%d",&ventas);
+
+totalventas = totalventas + ventas;}
+
+comision = totalventas * 0.1;
+ = sueldo_base + comision;
+printf("el total es de %d\n ", sueldototal);
+
+break;
+
+
+
+}
+	
+
+
+}
+
+
+
+
+
+
+
+
