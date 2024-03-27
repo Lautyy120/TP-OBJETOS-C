@@ -1,0 +1,59 @@
+/*#include<stdio.h>
+main () {
+	int a=0, b=1, c=2, d=0;
+	do {
+		d = a+b+c;
+		if (d==87) {
+			printf (" el numero %d, %d, %d dan 87", a,b,c);
+			break;
+		}
+		else {
+			a++,b++,c++;
+		}
+	
+	
+	} while(1>0);
+	
+};
+*/	
+/*
+#include<stdio.h>
+main () {
+	int a,b,c, prom;
+	printf ("ingrese el primer numero: ");
+	scanf ("%d", &a);
+	printf ("ingrese el segundo numero: ");
+	scanf ("%d", &b);
+	printf ("ingrese el tercer numero: ");
+	scanf ("%d", &c);
+	
+	prom = (a+b+c)/3;
+	printf("el promedio es: %d");
+
+};
+*/
+
+#include<stdio.h>
+main () {
+	int num;
+	printf ("ingrese un numero para ver si par o impar: ");
+	scanf ("%d", &num);
+	if(num>0) {
+		
+
+	
+	if (num%2==0){
+	printf ("el resultado es par");	
+		
+	}
+	else {
+	
+	printf ("el numero es impar");
+}
+}
+else{
+	printf("el numero no es mayor a 0");
+}
+
+};
+
