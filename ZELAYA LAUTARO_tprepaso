@@ -7,9 +7,9 @@
 main () {
 
 int caser, alumnos, precio, preciototal;
-int n = 3, sueldo_base, totalventas, comision, total, ventas;
+int n = 3, sueldo_base, totalventas, comision, total, ventas,i;
 float precioxalumno, sueldototal;
-printf ("ingrese algun numero: 1(para saber el pago del alquiler de micro y lo que debe pagar cada alumno por el viaje)\n, ejercicio 2\n, ejercicio 3\n");
+printf ("ingrese algun numero: 1(para saber el pago del alquiler de micro y lo que debe pagar cada alumno por el viaje)\n, ejercicio 2(para saber sueldo total mas comision)\n, ejercicio 3\n");
 scanf ("%d", &caser);
 switch (caser) {
 	case 1:
@@ -39,7 +39,7 @@ break;
 
 case 2:
 
-int i= 0;
+
 printf("ingresar un sueldo base: ");
 scanf("%d", &sueldo_base);
 
@@ -50,23 +50,69 @@ scanf("%d",&ventas);
 totalventas = totalventas + ventas;}
 
 comision = totalventas * 0.1;
- = sueldo_base + comision;
-printf("el total es de %d\n ", sueldototal);
+sueldototal = sueldo_base + comision;
+printf("el total es de %f\n ", sueldototal);
 
 break;
 
-
-
-}
+case 3: {
+		int nota, n = 3, notalfinal, trabajofinal, promedio,acum;
+		float totall;
+	
+	for (i=0; i<n; i++){
+	
+	
+	printf ("ingrese la nota: ");
+	scanf ("%d", &nota);
+	
+	acum= acum + nota;
 	
 
+}
 
+promedio = acum/n;
+
+printf ("ingrese la nota del examen final: ");
+scanf ("%d", &notalfinal);
+printf ( "ingrese la calificacion del trabajo final: ");
+scanf ("%d", &trabajofinal);
+
+totall=promedio*0.55+notalfinal*0.30+trabajofinal*0.15;
+
+printf ("La nota total es: %f",totall);
+
+
+	break;
+	
+}
+
+case 4 : {
+
+	int numInicial, numFinal;
+	printf ("ingrese numInicial: ");
+	scanf ("%d",&numInicial);
+	
+	printf ("ingrese numFinal: ");
+	scanf ("%d", &numFinal);
+	
+	for (i = numInicial; i<numFinal; i++) {
+		if (i%2==0)
+		printf ("%d\n", i);
+		
+		break;
+	}
+
+}
+
+case 5:
+	
+	int cuenta;
+	cuenta=((150-70)/2)+70;
+ printf ("Se encontraran en el km: %d ",cuenta);
+ 
+ 
 }
 
 
 
-
-
-
-
-
+}
