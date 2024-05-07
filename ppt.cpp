@@ -3,9 +3,11 @@
 #include <time.h>
 
 int main() {
-    int usuario, maquina, i, j, n=5, m=3, yo, el, us, riv, emp;
+    int usuario, maquina, i, j, n=5, m=3, yo, el, us, riv=0, jug, emp;
     srand(time(NULL));  
-    
+    do{
+    us=0;
+    riv=0;
     for(i=0; i<n; i++){
     	for(j=0; j<m; j++){
 
@@ -24,7 +26,7 @@ int main() {
     if (usuario == maquina) {
         printf("Empate\n\n");
     } else if ((usuario == 1 && maquina == 3) || (usuario == 2 && maquina == 1) || (usuario == 3 && maquina == 2)) {
-        printf("¡Ganaste!\n\n");
+        printf("Â¡Ganaste!\n\n");
         yo= yo+1;
     } else {
         printf("Perdiste\n\n ");
@@ -35,7 +37,7 @@ int main() {
 		if(yo>el){
 			us= us+1;
 		}else if(el>yo){
-			riv= riv+1;
+			riv +=1;
 		}else{
 			emp= emp+1;
 		}
@@ -43,13 +45,23 @@ int main() {
 		yo=0;
 		el=0;
 		printf("Termino la ronda N %d \n", i+1);
-		if(us==3){
-			printf("¡Ganaste la partida! :P\n\n");
+			if(us==3){
 			break;
 		}else if(riv==3){
-			printf("Perdiste la partida ;(\n\n ");
 			break;
 		}
-	}
 	
+	}
+		if(us>riv){
+			printf("Â¡Ganaste la partida! :P\n\n");
+		}else if(riv>us){
+			printf("Perdiste la partida ;(\n\n ");
+		}
+	if(us==riv){
+	printf("Empate.");
+	}
+	printf("\ndesea volver a jugar? \n1=si 2=no: ");
+	scanf("%d", & jug);
+}while (jug==1);
+ printf("FIN");
 }
