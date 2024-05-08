@@ -5,7 +5,7 @@
 int main() {
     int usuario, maquina, i, j, n=5, m=3, yo, el, us, riv=0, jug, emp;
     srand(time(NULL));  
-    do{
+do{
     us=0;
     riv=0;
     for(i=0; i<n; i++){
@@ -62,6 +62,12 @@ int main() {
 	}
 	printf("\ndesea volver a jugar? \n1=si 2=no: ");
 	scanf("%d", & jug);
+	
+	if(jug==1){
+		system("cls");
+	}
 }while (jug==1);
  printf("FIN");
 }
+
+
